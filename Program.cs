@@ -259,7 +259,7 @@ class Program
 
         {
 
-            for (int j = Math.Max(0, x - 1); j <= /*??*/(width - 1, x + 1); j++)
+                for (int j = Math.Max(0, x - 1); j <= Math.Min(width - 1, x + 1)
 
             {
 
@@ -361,8 +361,7 @@ class Program
 
 
 
-        return uncoveredCount == /* ??*/ * height - bombCount;
-
+      return uncoveredCount == width * height - bombCount;
     }
 
 }
